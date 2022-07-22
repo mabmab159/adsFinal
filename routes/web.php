@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\dashboardController;
+use App\Http\Controllers\habitacionController;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\usuariosController;
 use Illuminate\Support\Facades\Route;
@@ -31,3 +32,5 @@ Route::get("/usuarios", [usuariosController::class, "listarUsuarios"])->name("us
 Route::post("/crearUsuario", [usuariosController::class, "crearUsuario"])->name("creandoUsuario");
 
 Route::post("/", [loginController::class, "login"])->name("login");
+
+Route::get("/habitacion/{numero_habitacion}", [habitacionController::class,"formularioHabitacion"])->name("habitacion");
