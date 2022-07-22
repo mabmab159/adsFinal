@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Habitacion;
 use App\Models\User;
 use Database\Factories\userFactory;
 use Illuminate\Database\Seeder;
@@ -25,5 +26,7 @@ class DatabaseSeeder extends Seeder
             "usuario" => "miguel",
             "password" => Hash::make("123")
         ]);
+
+        Habitacion::factory(20)->create();
     }
 }

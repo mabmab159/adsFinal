@@ -41,7 +41,7 @@
                 <td>Apellido</td>
                 <td>Cargo</td>
                 <td>Usuario</td>
-                <td>Acciones</td>
+                <td colspan="2">Acciones</td>
             </tr>
             </thead>
             <tbody>
@@ -52,6 +52,8 @@
                     <td>{{$usuario->apellido}}</td>
                     <td>{{$usuario->cargo}}</td>
                     <td>{{$usuario->usuario}}</td>
+                    <td>Aca ira botonazo editar</td>
+                    <td>Aca ira botonazo eliminar</td>
                 </tr>
             @endforeach
             </tbody>
