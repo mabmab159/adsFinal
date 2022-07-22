@@ -26,4 +26,12 @@ Route::get("/dashboard", function () {
     return view("dashboard");
 });
 
+Route::get("/crearUsuario", function () {
+    return view("crearUsuario");
+})->name("crearUsuario");
+
+Route::post("/crearUsuario", function (){
+
+})->name("creandoUsuario");
+
 Route::post("/", [loginController::class, "login"])->name("login");

@@ -18,6 +18,11 @@
     <p>{{auth()->user()->cargo}}</p>
 </div>
 <div>Menu de opciones</div>
+<ul>
+    <li><a href="{{route("crearUsuario")}}">Crear usuario</a></li>
+    <li></li>
+    <li></li>
+</ul>
 @yield("contenido")
 </body>
 </html>
