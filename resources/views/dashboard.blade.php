@@ -3,9 +3,14 @@
     <div>
         <p>Aca va el estado actual de las habitaciones</p>
         <ul>
-            @for($i =0;$i<12;$i++)
-                <li>Esta es la habitacion {{$i+1}}</li>
-            @endfor
+            @foreach($habitaciones as $habitacion)
+                <div style="border: 1px solid">
+                    <p>{{$habitacion->id}}</p>
+                    <p>{{$habitacion->numero_habitacion}}</p>
+                    <p>{{$habitacion->piso}}</p>
+                    <p>{{$habitacion->estado}}</p>
+                </div>
+            @endforeach
         </ul>
     </div>
 @endsection

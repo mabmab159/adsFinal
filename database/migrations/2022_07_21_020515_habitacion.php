@@ -17,6 +17,7 @@ return new class extends Migration {
             $table->integer("numero_habitacion")->unique();
             $table->integer("piso");
             // 0 libre - 1 ocupado - 2 pendiente de mantenimiento
+            $table->float("precio");
             $table->integer("estado")->default(0);
             $table->timestamps();
         });
