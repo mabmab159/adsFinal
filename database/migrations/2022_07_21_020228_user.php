@@ -19,7 +19,8 @@ return new class extends Migration {
             $table->string("cargo");
             $table->string("usuario");
             $table->string("password");
-            $table->rememberToken();
+            //status 0 desactivo 1 activo
+            $table->integer("status")->default(1);
             $table->timestamps();
         });
     }

@@ -19,9 +19,10 @@
 </div>
 <div>Menu de opciones</div>
 <ul>
-    <li><a href="{{route("crearUsuario")}}">Crear usuario</a></li>
-    <li></li>
-    <li></li>
+    <li><a href="{{route("usuarios")}}">Usuarios</a></li>
+    <li><a href="{{route("usuarios")}}">Habitacion</a></li>
+    <li><a href="{{route("usuarios")}}">Mantenimiento</a></li>
+    <li><a href="{{route("usuarios")}}">Reportes</a></li>
 </ul>
 @yield("contenido")
 </body>

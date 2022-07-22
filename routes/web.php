@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\loginController;
+use App\Http\Controllers\usuariosController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,12 +27,8 @@ Route::get("/dashboard", function () {
     return view("dashboard");
 });
 
-Route::get("/crearUsuario", function () {
-    return view("crearUsuario");
-})->name("crearUsuario");
+Route::get("/usuarios", [usuariosController::class, "listarUsuarios"])->name("usuarios");
 
-Route::post("/crearUsuario", function (){
-
-})->name("creandoUsuario");
+Route::post("/crearUsuario", [usuariosController::class, "crearUsuario"])->name("creandoUsuario");
 
 Route::post("/", [loginController::class, "login"])->name("login");
