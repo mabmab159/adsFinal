@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Habitacion;
+use App\Models\Producto;
 use App\Models\User;
 use Database\Factories\userFactory;
 use Illuminate\Database\Seeder;
@@ -28,5 +29,6 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Habitacion::factory(20)->create();
+        Producto::factory(5)->create();
     }
 }
