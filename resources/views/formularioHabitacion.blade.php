@@ -3,10 +3,12 @@
 
     <div>
         <p>Este es el formulario de las habitaciones</p>
-        <form method="post">
+        <form method="post"
+              action="{{route("alquilarHabitacion", ["numero_habitacion"=>$habitacion->numero_habitacion])}}">
+            @csrf
             <div>
                 <label>Numero de habitacion</label>
-                <input value="{{$habitacion->numero_habitacion}}" disabled>
+                <input value="{{$habitacion->numero_habitacion}}" name="numero_habitacion" disabled>
             </div>
             <div>
                 <label>Piso de la habitacion</label>

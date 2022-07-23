@@ -33,4 +33,6 @@ Route::post("/crearUsuario", [usuariosController::class, "crearUsuario"])->name(
 
 Route::post("/", [loginController::class, "login"])->name("login");
 
-Route::get("/habitacion/{numero_habitacion}", [habitacionController::class,"formularioHabitacion"])->name("habitacion");
+Route::get("/habitacion/{numero_habitacion}", [habitacionController::class, "formularioHabitacion"])->name("habitacion");
+
+Route::post("/habitacion/{numero_habitacion}", [habitacionController::class, "alquilarHabitacion"])->name("alquilarHabitacion");
