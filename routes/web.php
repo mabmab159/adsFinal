@@ -36,3 +36,7 @@ Route::post("/", [loginController::class, "login"])->name("login");
 Route::get("/habitacion/{numero_habitacion}", [habitacionController::class, "formularioHabitacion"])->name("habitacion");
 
 Route::post("/habitacion/{numero_habitacion}", [habitacionController::class, "alquilarHabitacion"])->name("alquilarHabitacion");
+
+Route::get("/devolverHabitacion/{numero_habitacion}", [habitacionController::class, "devolverHabitacion"])->name("devolverHabitacion");
+
+Route::get("/habilitarHabitacion/{numero_habitacion}", [habitacionController::class, "habilitarHabitacion"])->name("habilitarHabitacion");
