@@ -40,3 +40,7 @@ Route::post("/habitacion/{numero_habitacion}", [habitacionController::class, "al
 Route::get("/devolverHabitacion/{numero_habitacion}", [habitacionController::class, "devolverHabitacion"])->name("devolverHabitacion");
 
 Route::get("/habilitarHabitacion/{numero_habitacion}", [habitacionController::class, "habilitarHabitacion"])->name("habilitarHabitacion");
+
+Route::post("/editarUsuario", [usuariosController::class, "editarUsuario"])->name("editarUsuario");
+
+Route::post("/eliminarUsuario/", [usuariosController::class, "eliminarUsuario"])->name("eliminarUsuario");

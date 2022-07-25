@@ -16,12 +16,35 @@ class usuariosController extends Controller
 
     public function crearUsuario(Request $request)
     {
-        $usuario = new User();
+        /*Usuario nuevo 0
+        Usuario anterior 1*/
+        if ($request->id == 0) {
+            $usuario = new User();
+            $usuario->password = Hash::make($request->password);
+        } else {
+            $usuario = User::all()->where("id", $request->id)->first();
+            if (!is_null($request->password)) {
+                $usuario->password = Hash::make($request->password);
+            }
+        }
         $usuario->nombre = $request->nombre;
         $usuario->apellido = $request->apellido;
         $usuario->cargo = $request->cargo;
         $usuario->usuario = $request->usuario;
-        $usuario->password = Hash::make($request->password);
+        $usuario->save();
+        return redirect("/dashboard");
+    }
+
+    public function editarUsuario(Request $request)
+    {
+        $usuario = User::all()->where("id", $request->id)->first();
+        return view("/usuarios")->with("usuarios", User::all())->with("usuario", $usuario);
+    }
+
+    public function eliminarUsuario(Request $request)
+    {
+        $usuario = User::all()->where("id", $request->id)->first();
+        $usuario->status = 0;
         $usuario->save();
         return redirect("/dashboard");
     }

@@ -17,6 +17,7 @@ return new class extends Migration {
             $table->integer("id_venta");
             $table->integer("idproducto");
             $table->string("nombre");
+            $table->integer("cantidad");
             $table->timestamps();
         });
     }

@@ -28,6 +28,14 @@ class DatabaseSeeder extends Seeder
             "password" => Hash::make("123")
         ]);
 
+        User::factory()->create([
+            "nombre" => "Luis",
+            "apellido" => "Zapata",
+            "cargo" => "recepcionista",
+            "usuario" => "luis",
+            "password" => Hash::make("123")
+        ]);
+
         Habitacion::factory(20)->create();
         Producto::factory(5)->create();
     }

@@ -35,6 +35,10 @@ class habitacionController extends Controller
                 $venta->id_venta = $alquiler->id;
                 $venta->idproducto = $producto->id;
                 $venta->nombre = $producto->nombre;
+                $venta->cantidad = $request["producto" . $producto->id];
+                //Reducir el stock del producto
+                $producto->stock = $producto->stock - $request["producto" . $producto->id];
+                $producto->save();
                 $venta->save();
             }
         }
