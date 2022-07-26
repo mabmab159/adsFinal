@@ -1,21 +1,37 @@
 .ventasContainer > form,
 .ventasContainer .tableContainer{
    padding: 40px;
+   width: 100%;
 }
 
-.ventasContainer form{width: 25%}
-.ventasContainer .tableContainer{width: 75%}
+.ventasContainer form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
 .ventasContainer{
+    width: 100%;
     display: flex;
-    align-items: center;
+    justify-content: center;
     height: calc(100vh - 150px);
     text-align: center;
 }
+
+.ventasContainer .formClienteVenta{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
 .formVentas{
+    width: 30%;
+    height: fit-content;
     min-width: 400px;
-    min-height: 500px;
-    padding: 30px;
+    padding: 40px;
+    margin: 40px;
     border: 5px solid black;
     border-radius: 25px;
     color: white;
@@ -23,6 +39,9 @@
     overflow: hidden;
     text-align: center;
 }
+
+.formProductoVentas{width: 60%;}
+
 .ventas-box{
     width: 100%;
     overflow: hidden;
