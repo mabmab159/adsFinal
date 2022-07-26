@@ -24,7 +24,10 @@ class ventasController extends Controller
                 $venta->id_venta = $cantidad + 1;
                 $venta->idproducto = $producto->id;
                 $venta->nombre = $producto->nombre;
+                $venta->precio = $request->precio * $request["producto" . $producto->id];
                 $venta->cantidad = $request["producto" . $producto->id];
+                $venta->cliente = $request->cliente;
+                $venta->dni = $request->dni;
                 //Reducir el stock del producto
                 $producto->stock = $producto->stock - $request["producto" . $producto->id];
                 $producto->save();
