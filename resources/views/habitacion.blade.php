@@ -1,6 +1,6 @@
 @extends("plantillas.plantilla")
 @section("contenido")
-<div class="habitacionContainer">
+<div class="usuariosContainer">
     @if(isset($habitacion))
             <form method="post" action="{{route("crearHabitacion")}}">
                 @csrf
@@ -54,9 +54,8 @@
                 </div>
             </form>
         @endif
-        <div class="tableContainerHabitacion">
-            <p>Aca iria el listado actual de empleados</p>
-            <table>
+        <div class="tableContainer">
+            <table cellspacing="0">
                 <thead>
                 <tr>
                     <td>Id</td>
@@ -73,18 +72,18 @@
                         <td>{{$habitacion->numero_habitacion}}</td>
                         <td>{{$habitacion->piso}}</td>
                         <td>{{$habitacion->precio}}</td>
-                        <td>
+                        <td class="subFormContainer">
                             <form method="post" action="{{route("editarHabitacion")}}">
                                 @csrf
                                 <input name="id" value="{{$habitacion->id}}" style="display: none">
-                                <button>Editar</button>
+                                <button class="editButton">Editar</button>
                             </form>
                         </td>
-                        <td>
+                        <td class="subFormContainer">
                             <form method="post" action="{{route("eliminarHabitacion")}}">
                                 @csrf
                                 <input name="id" value="{{$habitacion->id}}" style="display: none">
-                                <button>Eliminar</button>
+                                <button class="deleteButton">Eliminar</button>
                             </form>
                         </td>
                     </tr>
