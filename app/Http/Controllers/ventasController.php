@@ -23,7 +23,7 @@ class ventasController extends Controller
                 $venta = new Ventas();
                 $venta->id_venta = $cantidad + 1;
                 $venta->idproducto = $producto->id;
-                $venta->nombre = $producto->nombre;
+                $venta->nombre = $request->nombre;
                 $venta->precio = $request->precio * $request["producto" . $producto->id];
                 $venta->cantidad = $request["producto" . $producto->id];
                 $venta->cliente = $request->cliente;
@@ -34,6 +34,6 @@ class ventasController extends Controller
                 $venta->save();
             }
         }
-        return redirect("/dashboard");
+        return redirect("/ventas");
     }
 }
