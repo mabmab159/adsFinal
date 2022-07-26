@@ -19,6 +19,8 @@ return new class extends Migration {
             // 0 libre - 1 ocupado - 2 pendiente de mantenimiento
             $table->float("precio");
             $table->integer("estado")->default(0);
+            //status 0 desactivo 1 activo
+            $table->integer("status")->default(1);
             $table->timestamps();
         });
     }
