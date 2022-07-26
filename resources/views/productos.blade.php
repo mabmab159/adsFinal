@@ -59,7 +59,7 @@
         <table cellspacing="0">
             <thead>
             <tr>
-                <td style="width: 98.72px;">Id</td>
+                <td style="width: 98.72px;">Nº</td>
                 <td style="width: 441.69px;">Nombre</td>
                 <td style="width: 170.91px;">Precio</td>
                 <td style="width: 121.27px;">Stock</td>

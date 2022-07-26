@@ -98,7 +98,7 @@
         <table cellspacing="0">
             <thead>
             <tr>
-                <td>Id</td>
+                <td>Nº</td>
                 <td>Nombre</td>
                 <td>Apellido</td>
                 <td>Cargo</td>

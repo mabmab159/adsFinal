@@ -33,7 +33,7 @@
                 <div class="formHabitacion">
                     <h2>Crear habitación</h2>
                     <div style="display: none">
-                        <label>id</label>
+                        <label>Id</label>
                         <input name="id" value="0">
                     </div>
                     <div class="habitacion-box">
@@ -58,7 +58,7 @@
             <table cellspacing="0">
                 <thead>
                 <tr>
-                    <td style="width: 163.91px;">Id</td>
+                    <td style="width: 163.91px;">Nº</td>
                     <td style="width: 163.91px;">Numero de habitación</td>
                     <td style="width: 163.91px;">Piso</td>
                     <td style="width: 163.91px;">Precio</td>
