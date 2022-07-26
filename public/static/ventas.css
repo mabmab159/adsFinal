@@ -1,9 +1,18 @@
-.habitacionContainer{
+.ventasContainer > form,
+.ventasContainer .tableContainer{
+   padding: 40px;
+}
+
+.ventasContainer form{width: 25%}
+.ventasContainer .tableContainer{width: 75%}
+
+.ventasContainer{
     display: flex;
     align-items: center;
+    height: calc(100vh - 150px);
     text-align: center;
 }
-.formHabitacion{
+.formVentas{
     min-width: 400px;
     min-height: 500px;
     padding: 30px;
@@ -14,7 +23,7 @@
     overflow: hidden;
     text-align: center;
 }
-.habitacion-box{
+.ventas-box{
     width: 100%;
     overflow: hidden;
     font-size: 20px;
@@ -24,16 +33,16 @@
     flex-direction: row;
     align-items: center;
 }
-.habitacion-box label{
+.ventas-box label{
     padding-right: 10px;
     width: 30%;
     text-align: right;
 }
-.habitacion-box label:nth-child(){
+.ventas-box label:nth-child(){
     position: relative;
     right: 50px;
 }
-.habitacion-box input{
+.ventas-box input{
     border: none;
     outline: none;
     background: none;
@@ -48,10 +57,10 @@
     font-weight: normal;
     padding: 5px;
 }
-.habitacion-box input::placeholder { 
+.ventas-box input::placeholder { 
     color: rgb(70, 68, 68);
  }
- .btnHabitacion button{
+ .btnVentas button{
     width: 100%;
     background-color: rgb(17, 16, 16) ;
     border: 2px solid white;
@@ -62,20 +71,8 @@
     margin: 12px;
     border-radius: 20px;
  }
- .btnHabitacion button:hover{
+ .btnVentas button:hover{
     background-color: rgb(31, 31, 31);
     transition:  0.5s linear 0.2s;
     border: 2px solid black;
  }
- 
-.habitacionContainer > form,
-.habitacionContainer .tableContainerHabitacion{
-   padding: 40px;
-}
-
-.usuariosContainer td{
-    padding: 15px;
-}
-
-.habitacionContainer form{width: 25%}
-.habitacionContainer .tableContainerHabitacion{width: 75%}

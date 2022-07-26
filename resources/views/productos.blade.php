@@ -1,88 +1,104 @@
 @extends("plantillas.plantilla")
 @section("contenido")
+    <div class="productosContainer usuariosContainer">
     @if(isset($producto))
         <form method="post" action="{{route("crearProducto")}}">
             @csrf
-            <div style="display: none">
-                <label>id</label>
-                <input name="id" value="{{$producto->id}}">
+            <div class="formProductos">
+                <h2>Crear producto</h2>
+                <div class="productos-box">
+                    <label>id</label>
+                    <input name="id" value="{{$producto->id}}">
+                </div>
+                <div class="productos-box">
+                    <label>Nombre producto</label>
+                    <input name="nombre" value="{{$producto->nombre}}"autocomplete="off" placeholder="Ingrese Producto">
+                </div>
+                <div class="productos-box">
+                    <label>Precio</label>
+                    <input name="precio" value="{{$producto->precio}}"autocomplete="off" placeholder="Ingrese precio">
+                </div>
+                <div class="productos-box">
+                    <label>Stock</label>
+                    <input name="stock" value="{{$producto->stock}}"autocomplete="off" placeholder="Ingrese Stock">
+                </div>
+                <div class="btnProductos">
+                    <button type="submit">Guardar</button>
+                </div>
             </div>
-            <div>
-                <label>Nombre producto</label>
-                <input name="nombre" value="{{$producto->nombre}}">
-            </div>
-            <div>
-                <label>Precio</label>
-                <input name="precio" value="{{$producto->precio}}">
-            </div>
-            <div>
-                <label>Stock</label>
-                <input name="stock" value="{{$producto->stock}}">
-            </div>
-            <div>
-                <button type="submit">Guardar</button>
-            </div>
+           
         </form>
     @else
         <form method="post" action="{{route("crearProducto")}}">
             @csrf
-            <div style="display: none">
-                <label>id</label>
-                <input name="id" value="0">
-            </div>
-            <div>
-                <label>Nombre producto</label>
-                <input name="nombre">
-            </div>
-            <div>
-                <label>Precio</label>
-                <input name="precio">
-            </div>
-            <div>
-                <label>Stock</label>
-                <input name="stock">
-            </div>
-            <div>
-                <button type="submit">Registrar</button>
-            </div>
+          <div class="formProductos">
+          <h2>Crear producto</h2>
+            <div class="productos-box">
+                    <label>id</label>
+                    <input name="id" value="0">
+                </div>
+                <div class="productos-box">
+                    <label>Nombre producto</label>
+                    <input name="nombre" placeholder="Ingrese Producto" autocomplete="off">
+                </div>
+                <div class="productos-box">
+                    <label>Precio</label>
+                    <input name="precio" placeholder="Ingrese precio" autocomplete="off">
+                </div>
+                <div class="productos-box">
+                    <label>Stock</label>
+                    <input name="stock" placeholder="Ingrese stock" autocomplete="off">
+                </div>
+                <div class="btnProductos">
+                    <button type="submit">Registrar</button>
+                </div>
+          </div>
         </form>
     @endif
-    <div>
-        <p>Aca iria el listado actual de productos</p>
-        <table>
+    <div class="tableContainer">
+        <table cellspacing="0">
             <thead>
             <tr>
-                <td>Id</td>
-                <td>Nombre</td>
-                <td>Precio</td>
-                <td>Stock</td>
+                <td style="width: 98.72px;">Id</td>
+                <td style="width: 441.69px;">Nombre</td>
+                <td style="width: 170.91px;">Precio</td>
+                <td style="width: 121.27px;">Stock</td>
                 <td colspan="2">Acciones</td>
             </tr>
             </thead>
             <tbody>
-            @foreach($productos as $producto)
                 <tr>
-                    <td>{{$producto->id}}</td>
-                    <td>{{$producto->nombre}}</td>
-                    <td>{{$producto->precio}}</td>
-                    <td>{{$producto->stock}}</td>
-                    <td>
-                        <form method="post" action="{{route("editarProducto")}}">
-                            @csrf
-                            <input name="id" value="{{$producto->id}}" style="display: none">
-                            <button>Editar</button>
-                        </form>
-                    </td>
-                    <td>
-                        <form method="post" action="{{route("eliminarProducto")}}">
-                            @csrf
-                            <input name="id" value="{{$producto->id}}" style="display: none">
-                            <button>Eliminar</button>
-                        </form>
+                    <td style="padding: 0" colspan="5">
+                        <div style="max-height: 600px; overflow-y: overlay">
+                            <table style="border: none;">
+                            @foreach($productos as $producto)
+                                <tr>
+                                    <td>{{$producto->id}}</td>
+                                    <td>{{$producto->nombre}}</td>
+                                    <td>S/.{{$producto->precio}}</td>
+                                    <td>{{$producto->stock}}</td>
+                                    <td class="subFormContainer">
+                                        <form method="post" action="{{route("editarProducto")}}">
+                                            @csrf
+                                            <input name="id" value="{{$producto->id}}" style="display: none">
+                                            <button class="editButton">Editar</button>
+                                        </form>
+                                    </td>
+                                    <td class="subFormContainer">
+                                        <form method="post" action="{{route("eliminarProducto")}}">
+                                            @csrf
+                                            <input name="id" value="{{$producto->id}}" style="display: none">
+                                            <button class="deleteButton">Eliminar</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                             @endforeach
+                            </table>
+                        </div>
                     </td>
                 </tr>
-            @endforeach
             </tbody>
         </table>
+    </div>
     </div>
 @endsection

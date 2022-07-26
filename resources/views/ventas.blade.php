@@ -1,16 +1,17 @@
 @extends("plantillas.plantilla")
 @section("contenido")
-    <div>
-        <p>Este es el formulario de las habitaciones</p>
+    <div class="ventasContainer">
         <form method="post" action="{{route("realizarVenta")}}">
             @csrf
-            <div>
-                <label>Nombre de cliente</label>
-                <input name="cliente">
+            <div class="formVentas">
+                <h2>Ventas</h2>
+            <div class="ventas-box">
+                <label>Cliente</label>
+                <input name="cliente" placeholder="Ingrese cliente">
             </div>
-            <div>
-                <label>Documento del cliente</label>
-                <input name="dni">
+            <div class="ventas-box">
+                <label>DNI</label>
+                <input name="dni" placeholder="Ingrese DNI">
             </div>
             <p>Listado de productos</p>
             @foreach($productos as $producto)
@@ -22,7 +23,12 @@
                     <input type="number" min=0 max={{$producto->stock}} name="producto{{$producto->id}}">
                 </div>
             @endforeach
+            <div class="btnVentas">
             <button type="submit">Guardar</button>
+            </div>
+            
+            </div>
+           
         </form>
     </div>
 @endsection
