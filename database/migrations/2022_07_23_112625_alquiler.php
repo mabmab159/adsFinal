@@ -17,6 +17,7 @@ return new class extends Migration {
             $table->integer("numero_habitacion");
             $table->string("cliente");
             $table->integer("dni");
+            $table->float("precio");
             $table->timestamps();
         });
     }

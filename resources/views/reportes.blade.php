@@ -1,4 +1,11 @@
 @extends("plantillas.plantilla")
 @section("contenido")
-
+    <table>
+        <thead>
+        <tr></tr>
+        </thead>
+        <tbody>
+        @foreach()
+        </tbody>
+    </table>
 @endsection

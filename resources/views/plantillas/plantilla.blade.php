@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="{{ asset('static/productos.css') }}"/>
     <link rel="stylesheet" href="{{ asset('static/ventas.css') }}"/>
     <link rel="icon" href="{{ asset('static/iconoHotel.ico') }}"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+          integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <title>Principal</title>
 </head>
 <body>
@@ -21,6 +23,7 @@
     <div class="navBar">
         <img class="logo" src="{{ asset('static/iconoHotel.png')}}" alt="logo">
         <ul class="navList">
+            <li class="navListItem"><a href="{{route("dashboard")}}">Inicio - Alquiler</a></li>
             <li class="navListItem"><a href="{{route("usuarios")}}">Usuarios</a></li>
             <li class="navListItem"><a href="{{route("listarhabitacion")}}">Habitación</a></li>
             <li class="navListItem"><a href="{{route("listarProducto")}}">Productos</a></li>
@@ -28,9 +31,9 @@
             <li class="navListItem"><a href="{{route("usuarios")}}">Reportes</a></li>
         </ul>
     </div>
-    <div class ="containerRol">
+    <div class="containerRol">
         <div class="usuario">
-        <!--Usuario agregar icono usuario-->
+            <!--Usuario agregar icono usuario-->
             <i class="fa-solid fa-user"></i>
             <p>{{auth()->user()->nombre." ".auth()->user()->apellido}}</p>
         </div>
@@ -39,7 +42,7 @@
             <p>{{auth()->user()->cargo}}</p>
         </div>
     </div>
-    
+
 </div>
 @yield("contenido")
 </body>

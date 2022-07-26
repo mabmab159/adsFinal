@@ -27,7 +27,7 @@ Route::get("/plantilla", function () {
     return view("plantillas.plantilla");
 });
 
-Route::get("/dashboard", [dashboardController::class, "mostrarDashboard"]);
+Route::get("/dashboard", [dashboardController::class, "mostrarDashboard"])->name("dashboard");
 
 Route::get("/usuarios", [usuariosController::class, "listarUsuarios"])->name("usuarios");
 

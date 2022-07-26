@@ -17,17 +17,17 @@
         <h1 class="loginTitle">Bienvenido</h1>
         <div class="text-box">
         <i class="fa-solid fa-user"></i>
-            <input name="usuario" placeholder="Ingrese usuario" autocomplete="off"/>
+            <input name="usuario" placeholder="Ingrese usuario"/>
         </div>
-    
+
         <div class="text-box">
         <i class="fa-solid fa-lock"></i>
             <input name="password" placeholder="Ingrese password" type="password" />
         </div>
-        
+
         <button class="btn">Iniciar Sesión</button>
     </div>
-    
+
 </form>
 
 </body>

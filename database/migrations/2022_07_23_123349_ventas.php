@@ -18,6 +18,7 @@ return new class extends Migration {
             $table->integer("idproducto");
             $table->string("nombre");
             $table->integer("cantidad");
+            $table->float("precio");
             $table->string("cliente");
             $table->integer("dni");
             $table->timestamps();

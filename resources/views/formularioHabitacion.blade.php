@@ -7,15 +7,15 @@
             @csrf
             <div>
                 <label>Numero de habitacion</label>
-                <input value="{{$habitacion->numero_habitacion}}" name="numero_habitacion" disabled>
+                <input value="{{$habitacion->numero_habitacion}}" name="numero_habitacion" readonly>
             </div>
             <div>
                 <label>Piso de la habitacion</label>
-                <input value="{{$habitacion->piso}}" name="piso" disabled>
+                <input value="{{$habitacion->piso}}" name="piso" readonly>
             </div>
             <div>
                 <label>Precio</label>
-                <input value="{{$habitacion->precio}}" name="precio" disabled>
+                <input value="{{$habitacion->precio}}" name="precio" readonly>
             </div>
             <div>
                 <label>Nombre de cliente</label>
