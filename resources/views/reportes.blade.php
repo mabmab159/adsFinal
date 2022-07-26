@@ -51,7 +51,7 @@
         @foreach($ventas as $venta)
             <tr>
                 <td>{{$venta->id}}</td>
-                <td>{{$venta->nombre_producto}}</td>
+                <td>{{$venta->nombre}}</td>
                 <td>{{$venta->cantidad}}</td>
                 <td>{{$venta->precio}}</td>
                 <td>{{$venta->cliente}}</td>
