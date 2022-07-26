@@ -22,9 +22,8 @@
 <ul>
     <li><a href="{{route("usuarios")}}">Usuarios</a></li>
     <li><a href="{{route("listarhabitacion")}}">Habitacion</a></li>
-    <li><a href="{{route("usuarios")}}">Mantenimiento</a></li>
+    <li><a href="{{route("listarProducto")}}">Productos</a></li>
     <li><a href="{{route("usuarios")}}">Ventas</a></li>
-    <li><a href="{{route("usuarios")}}">Productos</a></li>
     <li><a href="{{route("usuarios")}}">Reportes</a></li>
 </ul>
 @yield("contenido")
