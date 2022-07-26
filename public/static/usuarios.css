@@ -1,0 +1,42 @@
+.usuario-box{
+    width: 400px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 30px;
+    border: 5px solid black;
+    border-radius: 25px;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+}
+.textBox{
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-bottom: 2px solid black;
+    display: flex;
+    flex-direction: row;
+}
+.textBox label{
+    padding-right: 10px;
+    
+}
+.textBox input{
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+    font-size: 18px;
+    width: 80%;
+    float: left;
+    margin: 0 30px;
+}
+.textBox input::placeholder { 
+    color: rgb(195, 195, 195);
+  
+ }
