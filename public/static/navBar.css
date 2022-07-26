@@ -32,6 +32,7 @@
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1.2rem;
 }
+
 .navBar ul li::before {
     content: "";
     height: 3px;
@@ -60,6 +61,7 @@
     font-size: 1.2rem;
     
 }
+
 .usuario i{
     color: white;
     display: flex;
@@ -77,7 +79,7 @@
     padding-top: 13px;
     font-size: 1.2rem;
     position: relative;
-    left: 20px;
+    left: 35px;
     
 }
 

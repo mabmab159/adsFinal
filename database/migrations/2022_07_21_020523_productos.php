@@ -17,6 +17,8 @@ return new class extends Migration {
             $table->string("nombre");
             $table->float("precio");
             $table->integer("stock");
+            //status 0 desactivo 1 activo
+            $table->integer("status")->default(1);
             $table->timestamps();
         });
     }
