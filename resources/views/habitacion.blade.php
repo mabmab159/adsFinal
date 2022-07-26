@@ -58,36 +58,44 @@
             <table cellspacing="0">
                 <thead>
                 <tr>
-                    <td>Id</td>
-                    <td>Numero de habitación</td>
-                    <td>Piso</td>
-                    <td>Precio</td>
+                    <td style="width: 163.91px;">Id</td>
+                    <td style="width: 163.91px;">Numero de habitación</td>
+                    <td style="width: 163.91px;">Piso</td>
+                    <td style="width: 163.91px;">Precio</td>
                     <td colspan="2">Acciones</td>
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($habitaciones as $habitacion)
                     <tr>
-                        <td>{{$habitacion->id}}</td>
-                        <td>{{$habitacion->numero_habitacion}}</td>
-                        <td>{{$habitacion->piso}}</td>
-                        <td>{{$habitacion->precio}}</td>
-                        <td class="subFormContainer">
-                            <form method="post" action="{{route("editarHabitacion")}}">
-                                @csrf
-                                <input name="id" value="{{$habitacion->id}}" style="display: none">
-                                <button class="editButton">Editar</button>
-                            </form>
-                        </td>
-                        <td class="subFormContainer">
-                            <form method="post" action="{{route("eliminarHabitacion")}}">
-                                @csrf
-                                <input name="id" value="{{$habitacion->id}}" style="display: none">
-                                <button class="deleteButton">Eliminar</button>
-                            </form>
+                        <td style="padding: 0" colspan="5">
+                            <div style="max-height: 600px; overflow-y: overlay">
+                                <table style="border: none;">
+                                @foreach($habitaciones as $habitacion)
+                                    <tr>
+                                        <td>{{$habitacion->id}}</td>
+                                        <td>{{$habitacion->numero_habitacion}}</td>
+                                        <td>{{$habitacion->piso}}</td>
+                                        <td>S/.{{$habitacion->precio}}</td>
+                                        <td class="subFormContainer">
+                                            <form method="post" action="{{route("editarHabitacion")}}">
+                                                @csrf
+                                                <input name="id" value="{{$habitacion->id}}" style="display: none">
+                                                <button class="editButton">Editar</button>
+                                            </form>
+                                        </td>
+                                        <td class="subFormContainer">
+                                            <form method="post" action="{{route("eliminarHabitacion")}}">
+                                                @csrf
+                                                <input name="id" value="{{$habitacion->id}}" style="display: none">
+                                                <button class="deleteButton">Eliminar</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                                </table>
+                            </div>
                         </td>
                     </tr>
-                @endforeach
                 </tbody>
             </table>
         </div>
