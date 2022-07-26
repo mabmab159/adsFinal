@@ -36,11 +36,14 @@
                                         <table style="border: none;">
                                             @foreach($productos as $producto)
                                                 <tr>
-                                                    <td><input name="nombre" value="{{$producto->nombre}}" readonly>
+                                                    <td><input style="border: 0" name="nombre"
+                                                               value="{{$producto->nombre}}" readonly>
                                                     </td>
-                                                    <td>S/.<input name="precio" value="{{$producto->precio}}"></td>
+                                                    <td>S/.<input style="border: 0" name="precio"
+                                                                  value="{{$producto->precio}}"></td>
                                                     <td>
-                                                        <input value="{{$producto->stock}}" name="stock" readonly>
+                                                        <input style="border: 0" value="{{$producto->stock}}"
+                                                               name="stock" readonly>
                                                     </td>
                                                     <td><input type="number" min=0
                                                                max={{$producto->stock}} name="producto{{$producto->id}}"

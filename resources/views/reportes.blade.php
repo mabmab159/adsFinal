@@ -36,28 +36,32 @@
         </tbody>
     </table>
     <div>Ingresos por ventas adicionales</div>
-    <table>
-        <thead>
-        <tr>
-            <td>Id</td>
-            <td>Nombre de producto</td>
-            <td>Cantidad</td>
-            <td>Precio</td>
-            <td>Cliente</td>
-            <td>DNI</td>
-        </tr>
-        </thead>
-        <tbody>
-        @foreach($ventas as $venta)
-            <tr>
-                <td>{{$venta->id}}</td>
-                <td>{{$venta->nombre}}</td>
-                <td>{{$venta->cantidad}}</td>
-                <td>{{$venta->precio}}</td>
-                <td>{{$venta->cliente}}</td>
-                <td>{{$venta->dni}}</td>
-            </tr>
-        @endforeach
-        </tbody>
-    </table>
+    <div class="formProductoVentas">
+        <div class="tableContainer">
+            <table>
+                <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Nombre de producto</td>
+                    <td>Cantidad</td>
+                    <td>Precio</td>
+                    <td>Cliente</td>
+                    <td>DNI</td>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach($ventas as $venta)
+                    <tr>
+                        <td>{{$venta->id}}</td>
+                        <td>{{$venta->nombre}}</td>
+                        <td>{{$venta->cantidad}}</td>
+                        <td>{{$venta->precio}}</td>
+                        <td>{{$venta->cliente}}</td>
+                        <td>{{$venta->dni}}</td>
+                    </tr>
+                @endforeach
+                </tbody>
+            </table>
+        </div>
+    </div>
 @endsection
