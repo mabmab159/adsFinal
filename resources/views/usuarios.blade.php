@@ -12,15 +12,15 @@
                 </div>
                 <div class="textBox">
                     <label>Nombre</label>
-                    <input name="nombre" value="{{$usuario->nombre}}">
+                    <input name="nombre" value="{{$usuario->nombre}}" autocomplete="off">
                 </div>
                 <div class="textBox">
                     <label>Apellido</label>
-                    <input name="apellido" value="{{$usuario->apellido}}">
+                    <input name="apellido" value="{{$usuario->apellido}}"autocomplete="off">
                 </div>
-                <div>
+                <div class="textBox">
                     <label>Cargo</label>
-                    <select name="cargo">
+                    <select name="cargo" class="opcUsuarios">
                         @if($usuario->cargo == "administrador")
                             <option value="administrador" selected>Administrador</option>
                         @else
@@ -38,15 +38,15 @@
                         @endif
                     </select>
                 </div>
-                <div>
+                <div class="textBox">
                     <label>Usuario</label>
-                    <input name="usuario" value="{{$usuario->usuario}}">
+                    <input name="usuario" value="{{$usuario->usuario}}"autocomplete="off">
                 </div>
-                <div>
+                <div class="textBox">
                     <label>Password</label>
-                    <input name="password">
+                    <input type="password" name="password" autocomplete="off" placeholder="Ingrese password">
                 </div>
-                <div>
+                <div class="btnUsuario">
                     <button type="submit">Guardar</button>
                 </div>
             </div>
@@ -59,33 +59,33 @@
                 <h2>Crear usuario</h2>
                 <div class="textBox">
                     <label class="textId">id:</label>
-                    <input name="id" value="0" placeholder="Ingrese id">
+                    <input name="id" value="0">
                 </div>
                 <div class="textBox">
                     <label>Nombre:</label>
-                    <input name="nombre" placeholder="Ingrese nombre">
+                    <input name="nombre" placeholder="Ingrese nombre" autocomplete="off">
                 </div>
                 <div class="textBox">
                     <label>Apellido:</label>
-                    <input name="apellido" placeholder="Ingrese apellido">
+                    <input name="apellido" placeholder="Ingrese apellido" autocomplete="off">
                 </div>
-                <div>
+                <div class="textBox">
                     <label>Cargo</label>
-                    <select name="cargo">
+                    <select class="opcUsuarios" name="cargo">
                         <option value="administrador">Administrador</option>
                         <option value="recepcionista">Recepcionista</option>
                         <option value="conserje">Conserje</option>
                     </select>
+                </div >
+                <div class="textBox">
+                    <label>Usuario:</label>
+                    <input name="usuario" placeholder="Ingrese usuario" autocomplete="off">
                 </div>
-                <div>
-                    <label>Usuario</label>
-                    <input name="usuario">
+                <div class="textBox">
+                    <label>Password:</label>
+                    <input type="password"  name="password" placeholder="Ingrese password" autocomplete="off">
                 </div>
-                <div>
-                    <label>Password</label>
-                    <input name="password">
-                </div>
-                <div>
+                <div class="btnUsuario">
                     <button type="submit">Registrar</button>
                 </div>
                 
