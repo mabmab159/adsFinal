@@ -36,6 +36,7 @@
             <!--Usuario agregar icono usuario-->
             <i class="fa-solid fa-user"></i>
             <p>{{auth()->user()->nombre." ".auth()->user()->apellido." (".auth()->user()->cargo.")"}}</p>
+            <a href="{{route("cerrarSesion")}}">Cerrar sesión</a>
         </div>
     </div>
 

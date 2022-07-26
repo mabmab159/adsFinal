@@ -71,3 +71,5 @@ Route::post("/realizarVenta", [ventasController::class, "realizarVenta"])->name(
 Route::get("/reporte", [reportesController::class, "reporte"])->name("reporte");
 
 Route::post("/filtrarReporte", [reportesController::class, "filtrar"])->name("filtrarReporte");
+
+Route::get("cerrarSesion", [loginController::class, "logout"])->name("cerrarSesion");
