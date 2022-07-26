@@ -2,4 +2,89 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-image: url("https://previews.123rf.com/images/dimapolie/dimapolie1804/dimapolie180400116/99171974-patr%C3%B3n-de-hotel-de-vector-fondo-transparente-del-hotel.jpg");
+    font-family: sans-serif;
+    background-size: cover;
+    animation: fondo 13s linear infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes fondo{
+    100%{background-position: 866px 1300px;}
+}
+/* Dashboard */
+
+.habitacionesContainer h2{
+    margin:  25px;
+}
+
+.habitacionesContainer{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.habitacionesGrid{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 20px 70px;
+}
+
+.habitacionItem{
+    min-width: 150px;
+    border: 5px solid black;
+    border-radius: 25px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.habitacionInfo{
+    text-align: center;
+    margin: 8px 0;
+}
+
+.habitacionesGrid label{
+    font-weight: bold;
+}
+
+.habitacionInfo a{
+    display: inline-block;
+    width: 80%;
+    margin: 5px 0;
+}
+
+.habitacionesGrid button:enabled{
+    width: 100%;
+    padding: 7px;
+    background-color: rgb(17, 16, 16);
+    color: white;
+    border: 2px solid white;
+    border-radius: 20px;
+    transition:  0.3s;
+    cursor: pointer;
+}
+
+.habitacionesGrid button:disabled{
+    width: 100%;
+    padding: 7px;
+    background-color: rgb(54, 54, 54);
+    color: rgb(173, 173, 173);
+    border: 2px solid rgb(94, 94, 94);
+    border-radius: 20px;
+    transition:  0.3s;
+}
+
+.habitacionesGrid button:enabled:hover{
+    background-color: rgb(31, 31, 31);
+    transition:  0.3s;
+    border: 2px solid black;
 }
