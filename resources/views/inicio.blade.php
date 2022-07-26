@@ -17,7 +17,7 @@
         <h1 class="loginTitle">Bienvenido</h1>
         <div class="text-box">
         <i class="fa-solid fa-user"></i>
-            <input name="usuario" placeholder="Ingrese usuario"/>
+            <input name="usuario" placeholder="Ingrese usuario" autocomplete="off"/>
         </div>
     
         <div class="text-box">

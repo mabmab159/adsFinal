@@ -48,6 +48,7 @@
 }
 .containerRol{
     width: 20%;
+    max-width: 200px;
 }
 .usuario{
     display: flex;
@@ -74,12 +75,9 @@
 }
 .cargo p{
     width: 100%;
-    color: white;
-    
+    color: white; 
     padding-top: 13px;
     font-size: 1.2rem;
-    position: relative;
-    left: 35px;
-    
+    text-align: center;
 }
 

@@ -1,9 +1,11 @@
 @extends("plantillas.plantilla")
 @section("contenido")
+    <div class="usuariosContainer">
     @if(isset($usuario))
         <form method="post" action="{{route("creandoUsuario")}}">
             @csrf
             <div class="usuario-box">
+                <h2>Editar usuario</h2>
                 <div class="textBox">
                     <label>id</label>
                     <input name="id" value="{{$usuario->id}}">
@@ -54,6 +56,7 @@
         <form method="post" action="{{route("creandoUsuario")}}">
             @csrf
             <div class="usuario-box">
+                <h2>Crear usuario</h2>
                 <div class="textBox">
                     <label class="textId">id:</label>
                     <input name="id" value="0" placeholder="Ingrese id">
@@ -90,10 +93,9 @@
             
         </form>
     @endif
-    <p>Aca va el formulario para que se creen nuevos usuarios prro</p>
-    <div>
-        <p>Aca iria el listado actual de empleados</p>
-        <table>
+
+    <div class="tableContainer">
+        <table cellspacing="0">
             <thead>
             <tr>
                 <td>Id</td>
@@ -112,23 +114,24 @@
                     <td>{{$usuario->apellido}}</td>
                     <td>{{$usuario->cargo}}</td>
                     <td>{{$usuario->usuario}}</td>
-                    <td>
+                    <td class="subFormContainer">
                         <form method="post" action="{{route("editarUsuario")}}">
                             @csrf
                             <input name="id" value="{{$usuario->id}}" style="display: none">
-                            <button>Editar</button>
+                            <button class="editButton">Editar</button>
                         </form>
                     </td>
-                    <td>
+                    <td class="subFormContainer">
                         <form method="post" action="{{route("eliminarUsuario")}}">
                             @csrf
                             <input name="id" value="{{$usuario->id}}" style="display: none">
-                            <button>Eliminar</button>
+                            <button class="deleteButton">Eliminar</button>
                         </form>
                     </td>
                 </tr>
             @endforeach
             </tbody>
         </table>
+    </div>
     </div>
 @endsection
