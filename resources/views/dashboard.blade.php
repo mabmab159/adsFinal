@@ -1,16 +1,36 @@
 @extends("plantillas.plantilla")
 @section("contenido")
-    <div>
-        <p>Aca va el estado actual de las habitaciones</p>
-        <ul>
+    <div class="habitacionesContainer">
+        <h2>Status de Habitaciones</h2>
+        <div class="habitacionesGrid">
             @foreach($habitaciones as $habitacion)
-                <div style="border: 1px solid">
-                    <label>Numero de habitacion</label>
-                    <p>{{$habitacion->numero_habitacion}}</p>
+            <div class="habitacionItem"
+                @if($habitacion->estado == 0)
+                    style="background-color: rgba(46,152,46,0.6)"
+                @elseif($habitacion->estado == 1)
+                style="background-color: rgba(255,0,0,0.6)"
+                @else
+                    style="background-color: rgba(230,218,11,0.6)"
+                @endif
+            >
+                <h3>Habitación {{$habitacion->numero_habitacion}}</h3>
+
+                <div class="habitacionInfo">
                     <label>Piso</label>
                     <p>{{$habitacion->piso}}</p>
+                </div>
+                <div class="habitacionInfo">
                     <label>Estado</label>
-                    <p>{{$habitacion->estado}}</p>
+                    @if($habitacion->estado == 0)
+                        <p>Disponible</p>
+                    @elseif($habitacion->estado == 1)
+                        <p>Ocupada</p>
+                    @else
+                        <p>Pendiente</p>
+                    @endif
+                </div>
+                
+                <div class="habitacionInfo habitacionButtons">
                     <a href="{{route("habitacion",["numero_habitacion"=>$habitacion->numero_habitacion])}}">
                         <button @if($habitacion->estado != 0)
                                 disabled
@@ -31,7 +51,9 @@
                         </button>
                     </a>
                 </div>
+                
+            </div>
             @endforeach
-        </ul>
+        </div>
     </div>
 @endsection

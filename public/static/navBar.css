@@ -1,0 +1,83 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+.container{
+    width: 100%;
+    padding: 15px 0;
+    background-color: black;
+    opacity: 0.9;
+    display: flex;
+}
+.navBar{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.logo{
+    width: 100px;
+    cursor: pointer;
+}
+.navBar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navBar ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.2rem;
+}
+
+.navBar ul li::before {
+    content: "";
+    height: 3px;
+    width: 0%;
+    background: #b92020;
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    transition: 0.4s ease-out;
+}
+.navBar ul li:hover::before{
+    width: 100%;
+}
+.containerRol{
+    width: 20%;
+    max-width: 200px;
+}
+.usuario{
+    display: flex;
+    flex-direction: row;
+}
+.usuario p{
+    width: 100%;
+    color: white;
+    display: flex;
+    padding-top: 10px;
+    font-size: 1.2rem;
+    
+}
+
+.usuario i{
+    color: white;
+    display: flex;
+    padding: 13px  20px 0px 0px;
+}
+
+.cargo{
+    display: flex;
+    flex-direction: row;
+}
+.cargo p{
+    width: 100%;
+    color: white; 
+    padding-top: 13px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
