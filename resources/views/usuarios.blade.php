@@ -6,7 +6,7 @@
             @csrf
             <div class="usuario-box">
                 <h2>Editar usuario</h2>
-                <div class="textBox">
+                <div style="display: none">
                     <label>id</label>
                     <input name="id" value="{{$usuario->id}}">
                 </div>
@@ -50,14 +50,14 @@
                     <button type="submit">Guardar</button>
                 </div>
             </div>
-            
+
         </form>
     @else
         <form method="post" action="{{route("creandoUsuario")}}">
             @csrf
             <div class="usuario-box">
                 <h2>Crear usuario</h2>
-                <div class="textBox">
+                <div style="display: none">
                     <label class="textId">id</label>
                     <input name="id" value="0">
                 </div>
@@ -88,9 +88,9 @@
                 <div class="btnUsuario">
                     <button type="submit">Registrar</button>
                 </div>
-                
+
             </div>
-            
+
         </form>
     @endif
 

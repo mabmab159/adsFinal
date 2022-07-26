@@ -6,7 +6,7 @@
             @csrf
             <div class="formProductos">
                 <h2>Crear producto</h2>
-                <div class="productos-box">
+                <div style="display: none">
                     <label>id</label>
                     <input name="id" value="{{$producto->id}}">
                 </div>
@@ -26,14 +26,14 @@
                     <button type="submit">Guardar</button>
                 </div>
             </div>
-           
+
         </form>
     @else
         <form method="post" action="{{route("crearProducto")}}">
             @csrf
           <div class="formProductos">
           <h2>Crear producto</h2>
-            <div class="productos-box">
+            <div style="display: none">
                     <label>id</label>
                     <input name="id" value="0">
                 </div>

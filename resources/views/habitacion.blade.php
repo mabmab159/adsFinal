@@ -6,7 +6,7 @@
                 @csrf
                 <div class="formHabitacion">
                     <h2>Habitaciones</h2>
-                    <div class="habitacion-box">
+                    <div style="display: none">
                         <label>id</label>
                         <input name="id" value="{{$habitacion->id}}" >
                     </div>
@@ -32,7 +32,7 @@
                 @csrf
                 <div class="formHabitacion">
                     <h2>Crear habitación</h2>
-                    <div class="habitacion-box">
+                    <div style="display: none">
                         <label>id</label>
                         <input name="id" value="0">
                     </div>
@@ -100,5 +100,5 @@
             </table>
         </div>
 </div>
-   
+
 @endsection
