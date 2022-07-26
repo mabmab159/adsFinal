@@ -18,6 +18,8 @@ return new class extends Migration {
             $table->integer("idproducto");
             $table->string("nombre");
             $table->integer("cantidad");
+            $table->string("cliente");
+            $table->integer("dni");
             $table->timestamps();
         });
     }

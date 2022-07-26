@@ -32,7 +32,7 @@ class habitacionController extends Controller
         $alquiler->numero_habitacion = $request->numero_habitacion;
         $alquiler->cliente = $request->cliente;
         $alquiler->dni = $request->dni;
-        $alquiler->id = Ventas::max("id_ventas") + 1;
+        $alquiler->id = Ventas::max("id_venta") + 1;
         $alquiler->save();
         //Recorrer los diferentes productos y validar la venta
         $productos = Producto::all();
@@ -43,6 +43,8 @@ class habitacionController extends Controller
                 $venta->idproducto = $producto->id;
                 $venta->nombre = $producto->nombre;
                 $venta->cantidad = $request["producto" . $producto->id];
+                $venta->cliente = $request->cliente;
+                $venta->dni = $request->dni;
                 //Reducir el stock del producto
                 $producto->stock = $producto->stock - $request["producto" . $producto->id];
                 $producto->save();
