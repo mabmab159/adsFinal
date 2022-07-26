@@ -19,7 +19,7 @@
                     <input name="apellido" value="{{$usuario->apellido}}"autocomplete="off">
                 </div>
                 <div class="textBox">
-                    <label>Cargo</label>
+                    <label>Cargo:</label>
                     <select name="cargo" class="opcUsuarios">
                         @if($usuario->cargo == "administrador")
                             <option value="administrador" selected>Administrador</option>
@@ -70,7 +70,7 @@
                     <input name="apellido" placeholder="Ingrese apellido" autocomplete="off">
                 </div>
                 <div class="textBox">
-                    <label>Cargo</label>
+                    <label>Cargo:</label>
                     <select class="opcUsuarios" name="cargo">
                         <option value="administrador">Administrador</option>
                         <option value="recepcionista">Recepcionista</option>

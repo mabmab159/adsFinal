@@ -1,53 +1,61 @@
 @extends("plantillas.plantilla")
 @section("contenido")
+    <div class="productosContainer">
     @if(isset($producto))
         <form method="post" action="{{route("crearProducto")}}">
             @csrf
-            <div style="display: none">
-                <label>id</label>
-                <input name="id" value="{{$producto->id}}">
+            <div class="formProductos">
+                <h2>Crear producto</h2>
+                <div class="productos-box">
+                    <label>id</label>
+                    <input name="id" value="{{$producto->id}}">
+                </div>
+                <div class="productos-box">
+                    <label>Nombre producto</label>
+                    <input name="nombre" value="{{$producto->nombre}}"autocomplete="off" placeholder="Ingrese Producto">
+                </div>
+                <div class="productos-box">
+                    <label>Precio</label>
+                    <input name="precio" value="{{$producto->precio}}"autocomplete="off" placeholder="Ingrese precio">
+                </div>
+                <div class="productos-box">
+                    <label>Stock</label>
+                    <input name="stock" value="{{$producto->stock}}"autocomplete="off" placeholder="Ingrese Stock">
+                </div>
+                <div class="btnProductos">
+                    <button type="submit">Guardar</button>
+                </div>
             </div>
-            <div>
-                <label>Nombre producto</label>
-                <input name="nombre" value="{{$producto->nombre}}">
-            </div>
-            <div>
-                <label>Precio</label>
-                <input name="precio" value="{{$producto->precio}}">
-            </div>
-            <div>
-                <label>Stock</label>
-                <input name="stock" value="{{$producto->stock}}">
-            </div>
-            <div>
-                <button type="submit">Guardar</button>
-            </div>
+           
         </form>
     @else
         <form method="post" action="{{route("crearProducto")}}">
             @csrf
-            <div style="display: none">
-                <label>id</label>
-                <input name="id" value="0">
-            </div>
-            <div>
-                <label>Nombre producto</label>
-                <input name="nombre">
-            </div>
-            <div>
-                <label>Precio</label>
-                <input name="precio">
-            </div>
-            <div>
-                <label>Stock</label>
-                <input name="stock">
-            </div>
-            <div>
-                <button type="submit">Registrar</button>
-            </div>
+          <div class="formProductos">
+          <h2>Crear producto</h2>
+            <div class="productos-box">
+                    <label>id</label>
+                    <input name="id" value="0">
+                </div>
+                <div class="productos-box">
+                    <label>Nombre producto</label>
+                    <input name="nombre" placeholder="Ingrese Producto" autocomplete="off">
+                </div>
+                <div class="productos-box">
+                    <label>Precio</label>
+                    <input name="precio" placeholder="Ingrese precio" autocomplete="off">
+                </div>
+                <div class="productos-box">
+                    <label>Stock</label>
+                    <input name="stock" placeholder="Ingrese stock" autocomplete="off">
+                </div>
+                <div class="btnProductos">
+                    <button type="submit">Registrar</button>
+                </div>
+          </div>
         </form>
     @endif
-    <div>
+    <div class="tableContainerProductos">
         <p>Aca iria el listado actual de productos</p>
         <table>
             <thead>
@@ -84,5 +92,6 @@
             @endforeach
             </tbody>
         </table>
+    </div>
     </div>
 @endsection

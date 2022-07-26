@@ -28,8 +28,8 @@
 }
 .textBox label{
     padding-right: 10px;
-    max-width: 100px;
-    
+    width: 30%;
+    text-align: right;
     
 }
 .textBox label:nth-child(){
@@ -42,14 +42,18 @@
     background: none;
     color: white;
     font-size: 18px;
-    width: 80%;
-    float: left;
+    width: 70%;
     margin: 0 30px;
-   text-align: center;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    color: black;
+    font-weight: normal;
+    padding: 5px;
 }
 
 .textBox input::placeholder { 
-    color: rgb(195, 195, 195);
+    color: rgb(70, 68, 68);
   
  }
 .opcUsuarios{
