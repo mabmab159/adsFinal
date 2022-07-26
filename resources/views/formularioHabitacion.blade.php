@@ -1,6 +1,5 @@
 @extends("plantillas.plantilla")
 @section("contenido")
-
     <div>
         <p>Este es el formulario de las habitaciones</p>
         <form method="post"

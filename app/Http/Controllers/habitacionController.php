@@ -32,6 +32,7 @@ class habitacionController extends Controller
         $alquiler->numero_habitacion = $request->numero_habitacion;
         $alquiler->cliente = $request->cliente;
         $alquiler->dni = $request->dni;
+        $alquiler->id = Ventas::max("id_ventas") + 1;
         $alquiler->save();
         //Recorrer los diferentes productos y validar la venta
         $productos = Producto::all();

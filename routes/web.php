@@ -5,6 +5,7 @@ use App\Http\Controllers\habitacionController;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\productosController;
 use App\Http\Controllers\usuariosController;
+use App\Http\Controllers\ventasController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -61,3 +62,7 @@ Route::post("/crearProducto", [productosController::class, "crearProducto"])->na
 Route::post("/editarProducto", [productosController::class, "editarProducto"])->name("editarProducto");
 
 Route::post("/eliminarProducto", [productosController::class, "eliminarProducto"])->name("eliminarProducto");
+
+Route::get("/ventas", [ventasController::class, "ventas"])->name("ventas");
+
+Route::post("/realizarVenta", [ventasController::class, "realizarVenta"])->name("realizarVenta");
