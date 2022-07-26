@@ -1,6 +1,6 @@
 @extends("plantillas.plantilla")
 @section("contenido")
-<div class="usuariosContainer" style="flex-direction: column; overflow: hidden">
+<div class="usuariosContainer" style="flex-direction: column">
     <div class="form" style="padding: 20px;">
         <form method="post" action="{{route("filtrarReporte")}}">
             @csrf
@@ -60,16 +60,24 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($ventas as $venta)
                     <tr>
-                        <td>{{$venta->id}}</td>
-                        <td>{{$venta->nombre_producto}}</td>
-                        <td>{{$venta->cantidad}}</td>
-                        <td>{{$venta->precio}}</td>
-                        <td>{{$venta->cliente}}</td>
-                        <td>{{$venta->dni}}</td>
+                        <td style="padding: 0" colspan="5">
+                            <div style="max-height: 600px; overflow-y: overlay">
+                                <table style="border: none;">
+                                @foreach($ventas as $venta)
+                                    <tr>
+                                        <td>{{$venta->id}}</td>
+                                        <td>{{$venta->nombre_producto}}</td>
+                                        <td>{{$venta->cantidad}}</td>
+                                        <td>{{$venta->precio}}</td>
+                                        <td>{{$venta->cliente}}</td>
+                                        <td>{{$venta->dni}}</td>
+                                    </tr>
+                                @endforeach
+                                </table>
+                            </div>
+                        </td>
                     </tr>
-                @endforeach
                 </tbody>
             </table>
         </div>
