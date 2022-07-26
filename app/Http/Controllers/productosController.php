@@ -9,7 +9,7 @@ class productosController extends Controller
 {
     public function listarProducto(Request $request)
     {
-        return view("productos")->with("productos", Producto::all());
+        return view("productos")->with("productos", Producto::all()->where("status", 1));
     }
 
     public function crearProducto(Request $request)
