@@ -6,7 +6,7 @@
 }
 .formHabitacion{
     min-width: 400px;
-    min-height: 500px;
+    min-height: 420px;
     padding: 30px;
     border: 5px solid black;
     border-radius: 25px;
@@ -27,7 +27,8 @@
 }
 .habitacion-box label{
     padding-right: 10px;
-    max-width: 100px;
+    width: 30%;
+    text-align: right;
 }
 .habitacion-box label:nth-child(){
     position: relative;
@@ -39,14 +40,17 @@
     background: none;
     color: white;
     font-size: 18px;
-    width: 50%;
-    float: left;
+    width: 70%;
     margin: 0 30px;
-   text-align: center;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    color: black;
+    font-weight: normal;
+    padding: 5px;
 }
 .habitacion-box input::placeholder { 
-    color: rgb(195, 195, 195);
-  
+    color: black;
  }
  .btnHabitacion button{
     width: 100%;
