@@ -19,7 +19,7 @@
                     <input name="apellido" value="{{$usuario->apellido}}"autocomplete="off">
                 </div>
                 <div class="textBox">
-                    <label>Cargo:</label>
+                    <label>Cargo</label>
                     <select name="cargo" class="opcUsuarios">
                         @if($usuario->cargo == "administrador")
                             <option value="administrador" selected>Administrador</option>
@@ -58,19 +58,19 @@
             <div class="usuario-box">
                 <h2>Crear usuario</h2>
                 <div class="textBox">
-                    <label class="textId">id:</label>
+                    <label class="textId">id</label>
                     <input name="id" value="0">
                 </div>
                 <div class="textBox">
-                    <label>Nombre:</label>
+                    <label>Nombre</label>
                     <input name="nombre" placeholder="Ingrese nombre" autocomplete="off">
                 </div>
                 <div class="textBox">
-                    <label>Apellido:</label>
+                    <label>Apellido</label>
                     <input name="apellido" placeholder="Ingrese apellido" autocomplete="off">
                 </div>
                 <div class="textBox">
-                    <label>Cargo:</label>
+                    <label>Cargo</label>
                     <select class="opcUsuarios" name="cargo">
                         <option value="administrador">Administrador</option>
                         <option value="recepcionista">Recepcionista</option>
@@ -78,11 +78,11 @@
                     </select>
                 </div >
                 <div class="textBox">
-                    <label>Usuario:</label>
+                    <label>Usuario</label>
                     <input name="usuario" placeholder="Ingrese usuario" autocomplete="off">
                 </div>
                 <div class="textBox">
-                    <label>Password:</label>
+                    <label>Password</label>
                     <input type="password"  name="password" placeholder="Ingrese password" autocomplete="off">
                 </div>
                 <div class="btnUsuario">

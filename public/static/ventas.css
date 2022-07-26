@@ -1,0 +1,78 @@
+.ventasContainer > form,
+.ventasContainer .tableContainer{
+   padding: 40px;
+}
+
+.ventasContainer form{width: 25%}
+.ventasContainer .tableContainer{width: 75%}
+
+.ventasContainer{
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 150px);
+    text-align: center;
+}
+.formVentas{
+    min-width: 400px;
+    min-height: 500px;
+    padding: 30px;
+    border: 5px solid black;
+    border-radius: 25px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    text-align: center;
+}
+.ventas-box{
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.ventas-box label{
+    padding-right: 10px;
+    width: 30%;
+    text-align: right;
+}
+.ventas-box label:nth-child(){
+    position: relative;
+    right: 50px;
+}
+.ventas-box input{
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+    font-size: 18px;
+    width: 70%;
+    margin: 0 30px;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    color: black;
+    font-weight: normal;
+    padding: 5px;
+}
+.ventas-box input::placeholder { 
+    color: rgb(70, 68, 68);
+ }
+ .btnVentas button{
+    width: 100%;
+    background-color: rgb(17, 16, 16) ;
+    border: 2px solid white;
+    color: white;
+    padding: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 12px;
+    border-radius: 20px;
+ }
+ .btnVentas button:hover{
+    background-color: rgb(31, 31, 31);
+    transition:  0.5s linear 0.2s;
+    border: 2px solid black;
+ }
