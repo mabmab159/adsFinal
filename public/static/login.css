@@ -1,17 +1,18 @@
 
-body{
+body {
     background-image: url("https://previews.123rf.com/images/dimapolie/dimapolie1804/dimapolie180400116/99171974-patr%C3%B3n-de-hotel-de-vector-fondo-transparente-del-hotel.jpg");
     font-family: sans-serif;
- background-size: cover;
-   animation: fondo 13s linear infinite;
+    background-size: cover;
+    animation: fondo 13s linear infinite;
 }
-@keyframes fondo{
-    100%{
-        background-position:1300px 866px;
+
+@keyframes fondo {
+    100% {
+        background-position: 1300px 866px;
     }
-   
 }
-.login-box{
+
+.login-box {
     width: 320px;
     position: absolute;
     top: 50%;
@@ -23,23 +24,26 @@ body{
     color: white;
     background-color: rgba(0, 0, 0, 0.6);
 
-  
+
 }
-.login-box h1{
-   
+
+.login-box h1 {
+
     font-size: 40px;
     border-bottom: 6px solid black;
     margin-bottom: 50px;
     padding: 13px 0;
-    
+
 }
-.loginTitle{
+
+.loginTitle {
     display: inline-block;
     position: relative;
     margin: auto;
-   
+
 }
-.text-box{
+
+.text-box {
     width: 100%;
     overflow: hidden;
     font-size: 20px;
@@ -47,12 +51,14 @@ body{
     margin: 8px 0;
     border-bottom: 2px solid black;
 }
-.text-box i{
+
+.text-box i {
     width: 26px;
     float: left;
     text-align: center;
 }
-.text-box input{
+
+.text-box input {
     border: none;
     outline: none;
     background: none;
@@ -61,17 +67,19 @@ body{
     width: 80%;
     float: left;
     margin: 0 10px;
-  
+
 }
-.text-box input::placeholder { 
+
+.text-box input::placeholder {
     color: rgb(195, 195, 195);
-  
- }
-.btn{
+
+}
+
+.btn {
     width: 100%;
-    background-color: rgb(17, 16, 16) ;
+    background-color: rgb(17, 16, 16);
     border: 2px solid white;
-   
+
     color: white;
     padding: 5px;
     font-size: 18px;
@@ -79,8 +87,9 @@ body{
     margin: 12px;
     border-radius: 20px;
 }
-.btn:hover{
+
+.btn:hover {
     background-color: rgb(31, 31, 31);
-    transition:  0.4s linear 0.2s;
+    transition: 0.4s linear 0.2s;
     border: 2px solid black;
 }
