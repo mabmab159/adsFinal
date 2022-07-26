@@ -35,11 +35,7 @@
         <div class="usuario">
             <!--Usuario agregar icono usuario-->
             <i class="fa-solid fa-user"></i>
-            <p>{{auth()->user()->nombre." ".auth()->user()->apellido}}</p>
-        </div>
-        <div class="cargo">
-            <!--ROL-->
-            <p>{{auth()->user()->cargo}}</p>
+            <p>{{auth()->user()->nombre." ".auth()->user()->apellido." (".auth()->user()->cargo.")"}}</p>
         </div>
     </div>
 
