@@ -29,6 +29,8 @@ Route::get("/dashboard", [dashboardController::class, "mostrarDashboard"]);
 
 Route::get("/usuarios", [usuariosController::class, "listarUsuarios"])->name("usuarios");
 
+Route::get("/listarhabitacion", [habitacionController::class, "listarHabitacion"])->name("listarhabitacion");
+
 Route::post("/crearUsuario", [usuariosController::class, "crearUsuario"])->name("creandoUsuario");
 
 Route::post("/", [loginController::class, "login"])->name("login");
@@ -44,3 +46,9 @@ Route::get("/habilitarHabitacion/{numero_habitacion}", [habitacionController::cl
 Route::post("/editarUsuario", [usuariosController::class, "editarUsuario"])->name("editarUsuario");
 
 Route::post("/eliminarUsuario/", [usuariosController::class, "eliminarUsuario"])->name("eliminarUsuario");
+
+Route::post("/crearHabitacion", [habitacionController::class, "crearHabitacion"])->name("crearHabitacion");
+
+Route::post("/editarHabitacion", [habitacionController::class, "editarHabitacion"])->name("editarHabitacion");
+
+Route::post("/eliminarHabitacion/", [habitacionController::class, "eliminarHabitacion"])->name("eliminarHabitacion");

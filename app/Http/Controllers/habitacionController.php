@@ -10,9 +10,15 @@ use Illuminate\Http\Request;
 
 class habitacionController extends Controller
 {
+
+    public function listarHabitacion()
+    {
+        return view("habitacion")->with("habitaciones", Habitacion::all()->where("status", 1));
+    }
+
     public function formularioHabitacion($numero_habitacion)
     {
-        $habitacion = Habitacion::all()->where("numero_habitacion", $numero_habitacion)->first();
+        $habitacion = Habitacion::all()->where("numero_habitacion", $numero_habitacion)->where("status", 1)->first();
         return view("formularioHabitacion")->with("habitacion", $habitacion)->with("productos", Producto::all());
     }
 
@@ -43,7 +49,6 @@ class habitacionController extends Controller
             }
         }
         return redirect("/dashboard");
-
     }
 
     public function devolverHabitacion($numero_habitacion)
@@ -58,6 +63,35 @@ class habitacionController extends Controller
     {
         $habitacion = Habitacion::all()->where("numero_habitacion", $numero_habitacion)->first();
         $habitacion->estado = 0;
+        $habitacion->save();
+        return redirect("/dashboard");
+    }
+
+    public function crearHabitacion(Request $request)
+    {
+        if ($request->id == 0) {
+            $habitacion = new Habitacion();
+        } else {
+            $habitacion = Habitacion::all()->where("id", $request->id)->first();
+        }
+        $habitacion->numero_habitacion = $request->numero_habitacion;
+        $habitacion->piso = $request->piso;
+        $habitacion->precio = $request->precio;
+        $habitacion->estado = 0;
+        $habitacion->save();
+        return redirect("/dashboard");
+    }
+
+    public function editarHabitacion(Request $request)
+    {
+        $habitacion = Habitacion::all()->where("id", $request->id)->first();
+        return view("habitacion")->with("habitaciones", Habitacion::all())->with("habitacion", $habitacion);
+    }
+
+    public function eliminarHabitacion(Request $request)
+    {
+        $habitacion = Habitacion::all()->where("id", $request->id)->first();
+        $habitacion->status = 0;
         $habitacion->save();
         return redirect("/dashboard");
     }

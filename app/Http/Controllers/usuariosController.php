@@ -11,7 +11,7 @@ class usuariosController extends Controller
 
     public function listarUsuarios()
     {
-        return view("usuarios")->with("usuarios", User::all());
+        return view("usuarios")->with("usuarios", User::all()->where("status", 1));
     }
 
     public function crearUsuario(Request $request)
