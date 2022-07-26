@@ -59,6 +59,7 @@
                         </table>
                     </div>
                 </div>
+            </div>
         </form>
     </div>
 @endsection
